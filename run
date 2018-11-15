@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+gradle build -Dhttp.proxyHost=proxyo.fnb.co.za -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxyo.fnb.co.za -Dhttps.proxyPort=8080

@@ -1,0 +1,6 @@
+rootProject.name = 'spotify'
+/*systemProp.http.proxyHost='proxyo.fnb.co.za'
+systemProp.http.proxyPort=8080
+systemProp.https.proxyHost='proxyo.fnb.co.za'
+systemProp.https.proxyPort=8080
+*/

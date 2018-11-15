@@ -1,0 +1,71 @@
+group 'org.chibamuio.entertainment'
+version '1.0-SNAPSHOT'
+
+/*
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+sourceCompatibility = System.getProperty("java.version")
+targetCompatibility = System.getProperty("java.version")
+dependencies {
+    def junitVersion = '5.0.1'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:' + junitVersion
+    testCompile 'org.junit.jupiter:junit-jupiter-engine:' + junitVersion
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    }
+
+*/
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+bootJar {
+    baseName = 'spotify-chibamuio'
+    version =  '0.1.0'
+    mainClassName = 'org.chibamuio.entertainment.SpotifyApplication'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = System.getProperty("java.version")
+targetCompatibility = System.getProperty("java.version")
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    def junitVersion = '5.0.1'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:' + junitVersion
+    testCompile 'org.junit.jupiter:junit-jupiter-engine:' + junitVersion
+}
+description ="""
+Spotify is a music streaming platform developed by Swedish company Spotify Technology, 
+headquartered in Stockholm, Sweden and listed on the NYSE. Spotify launched their service on 7 October 2008. 
+As of 20 August 2018, it is available in 65 regions
+"""
